@@ -11,7 +11,7 @@
   "bluetooth": [
     {
       "local_name": "Polar*",
-      "connectable": true
+      "connectable": false
     }
   ],
   "dependencies": ["bluetooth"]
