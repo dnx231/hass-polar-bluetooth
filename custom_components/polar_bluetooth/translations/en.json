@@ -1,0 +1,21 @@
+"""Translations for Polar Bluetooth integration."""
+
+{
+    "config": {
+        "step": {
+            "bluetooth_confirm": {
+                "description": "Do you want to add the Polar sensor {name} to Home Assistant?"
+            },
+            "user": {
+                "data": {
+                    "address": "Device"
+                },
+                "description": "Select your Polar heart rate sensor"
+            }
+        },
+        "abort": {
+            "already_configured": "This device is already configured",
+            "no_devices_found": "No Polar devices found. Make sure your sensor is turned on and nearby."
+        }
+    }
+}

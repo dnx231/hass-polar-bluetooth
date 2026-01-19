@@ -1,0 +1,6 @@
+{
+  "config_flow": true,
+  "bluetooth": {
+    "connectable": true
+  }
+}

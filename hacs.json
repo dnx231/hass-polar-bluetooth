@@ -1,0 +1,20 @@
+# Home Assistant Polar Bluetooth Integration
+
+[![hacs_badge](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://github.com/custom-components/hacs)
+
+A Home Assistant custom integration for Polar heart rate sensors via Bluetooth.
+
+## Quick Start
+
+See [README.md](README.md) for full documentation.
+
+## Installation
+
+Copy `custom_components/polar_bluetooth` to your Home Assistant's `custom_components` directory and restart.
+
+## Features
+
+- Real-time heart rate monitoring
+- Battery level tracking
+- Automatic device discovery
+- Easy UI configuration
