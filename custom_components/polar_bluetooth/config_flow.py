@@ -40,6 +40,9 @@ class PolarBluetoothConfigFlow(ConfigFlow, domain=DOMAIN):
         self._abort_if_unique_id_configured()
         
         self._discovered_device = discovery_info
+        self.context["title_placeholders"] = {
+            "name": discovery_info.name or "Polar Sensor"
+        }
         
         return await self.async_step_bluetooth_confirm()
 
@@ -96,8 +99,8 @@ class PolarBluetoothConfigFlow(ConfigFlow, domain=DOMAIN):
             ):
                 continue
             
-            # Check if it's a Polar device
-            if discovery_info.name and "Polar" in discovery_info.name:
+            # Check if it matches our Bluetooth filter (Polar devices)
+            if discovery_info.name and discovery_info.name.startswith("Polar"):
                 self._discovered_devices[discovery_info.address] = discovery_info
 
         if not self._discovered_devices:

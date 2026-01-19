@@ -10,7 +10,8 @@
   "version": "1.0.0",
   "bluetooth": [
     {
-      "local_name": "Polar*"
+      "local_name": "Polar*",
+      "connectable": true
     }
   ],
   "dependencies": ["bluetooth"]
