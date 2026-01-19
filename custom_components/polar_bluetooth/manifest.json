@@ -17,7 +17,7 @@
       "service_uuids": [
         "0000180d-0000-1000-8000-00805f9b34fb"
       ],
-      "connectable": false
+      "connectable": true
     }
   ],
   "dependencies": ["bluetooth"]
