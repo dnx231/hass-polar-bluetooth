@@ -29,7 +29,7 @@ This integration should work with any Polar heart rate sensor that supports Blue
    - Go to HACS → Integrations
    - Click the three dots in the top right
    - Select "Custom repositories"
-   - Add `https://github.com/dehuesde/hass-polar-bluetooth` as an Integration
+   - Add `https://github.com/dnx231/hass-polar-bluetooth` as an Integration
 3. Click "Install" on the Polar Bluetooth Sensor card
 4. Restart Home Assistant
 
