@@ -4,6 +4,7 @@
   "codeowners": ["@dnx231"],
   "config_flow": true,
   "documentation": "https://github.com/dnx231/hass-polar-bluetooth",
+  "icon": "mdi:heart-pulse",
   "iot_class": "local_polling",
   "requirements": ["bleak>=0.21.0"],
   "version": "1.0.0",
