@@ -12,6 +12,12 @@
     {
       "local_name": "Polar*",
       "connectable": false
+    },
+    {
+      "service_uuids": [
+        "0000180d-0000-1000-8000-00805f9b34fb"
+      ],
+      "connectable": false
     }
   ],
   "dependencies": ["bluetooth"]
