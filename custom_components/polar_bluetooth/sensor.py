@@ -153,11 +153,11 @@ class PolarDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
         )
         
         if needs_connect:
-            _LOGGER.info("H10 not connected, attempting to connect to %s...", self.ble_device.address)
+            _LOGGER.info("Polar device not connected, attempting to connect to %s...", self.ble_device.address)
             try:
                 await self._async_connect()
             except Exception as err:
-                _LOGGER.warning("Failed to connect to H10: %s - will retry in %s seconds", err, SCAN_INTERVAL.total_seconds())
+                _LOGGER.warning("Failed to connect to Polar device: %s - will retry in %s seconds", err, SCAN_INTERVAL.total_seconds())
                 self._connected = False
                 self._client = None
                 # Don't raise - return data even if connection failed
@@ -255,7 +255,7 @@ class PolarDataUpdateCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             self._latest_heart_rate = self._parse_heart_rate(data)
             
             # Only update timestamp for valid heart rates (> 0)
-            # H10 sends 0 when losing skin contact - don't reset the timer
+            # Polar device sends 0 when losing skin contact - don't reset the timer
             if self._latest_heart_rate > 0:
                 self._last_notification_time = time.time()
                 _LOGGER.debug("Received heart rate: %s BPM", self._latest_heart_rate)
