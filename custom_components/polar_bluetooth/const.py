@@ -1,3 +1,5 @@
+from datetime import timedelta
+
 """Constants for the Polar Bluetooth integration."""
 
 DOMAIN = "polar_bluetooth"
@@ -14,4 +16,8 @@ CONF_DEVICE_ADDRESS = "device_address"
 
 # Default values
 DEFAULT_NAME = "Polar Heart Rate"
-SCAN_INTERVAL = 1  # seconds
+
+SCAN_INTERVAL = timedelta(seconds=30)
+
+# How long without heart rate notifications before marking unavailable (seconds)
+STALE_DATA_THRESHOLD = 15
